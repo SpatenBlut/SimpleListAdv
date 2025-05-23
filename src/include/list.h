@@ -5,7 +5,17 @@ using namespace std;
 
 
 class List{
+    private:
+    protected:
     public:
+
+        List(){
+            //constructor
+        }
+
+        ~List(){
+            //destructor
+        }
 
         vector<string> list;
         string name;
