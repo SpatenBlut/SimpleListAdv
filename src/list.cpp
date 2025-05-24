@@ -92,4 +92,22 @@ void List::print_menu() {
             cout << "Invalide Choice. Quitting..\n";
         }
     }
+
+
+    void List::find_userList() {
+        bool userFound = false;
+        cout << "\n\n\n\n\n\n\n";
+        cout << "*** Welcome ***" << name << "***\n";
+
+        for(unsigned int user_index = 0; user_index < mainList.size(); user_index++) {
+            cout << mainList[user_index][0] << "\n";
+            if(mainList[user_index][0] == name) {
+                cout << "Found user: " << mainList[user_index][0] << "\n";
+                list = mainList[user_index];
+                userFound = true;
+                break;
+            }
+
+        }
+    }
     

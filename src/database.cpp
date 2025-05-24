@@ -1,12 +1,14 @@
 #include "include/database.h"
 
-void Database::write(vector<string> list) {
+void Database::write(vector<vector<string>> mainList) {
     ofstream db;
     db.open("db/lists.sl");
 
     if(db.is_open()){
-         for(unsigned list_index=0; list_index < list.size(); list_index++) {
-            db << list[list_index] << "\n";
+         for(unsigned int user_index = 0; user_index < mainList[user_index].size(); user_index++) {
+            for(unsigned int list_index = 0; list_index < mainList[user_index][list_index].size(); list_index++) {
+                db << mainList[user_index][list_index] << "\n";
+            }
         }        
     }
     else{
