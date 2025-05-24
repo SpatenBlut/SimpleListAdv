@@ -8,6 +8,13 @@ class Database{
     private:
     protected:
     public:
+
+        Database() {
+            // constructor
+        }
+        ~Database() {
+            // destructor
+        }
     
         vector<vector<string>> mainList;
         string name;
